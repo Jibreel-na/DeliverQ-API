@@ -15,11 +15,11 @@ const Schema = mongoose.Schema(
     },
     name: {
       type: String,
-      required: true,
+      required: false,
     },
     type: {
       type: Number,
-      required: true,
+      required: false,
     },
     phone: {
       type: String,
@@ -36,6 +36,18 @@ const Schema = mongoose.Schema(
     locationText: {
       type: String,
       required: true,
+    },
+    address: {
+      type: String,
+      required: true,
+    },
+    landmark: {
+      type: String,
+      required: true,
+    },
+    dateTime: {
+      type: Date,
+      required: false,
     },
     createdAt: {
       default: Date.now,

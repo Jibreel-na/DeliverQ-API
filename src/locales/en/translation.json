@@ -122,5 +122,22 @@
  " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612b7db6cf6951683c88caf8.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612b7db6cf6951683c88caf8.jpeg'",
  " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612b8029cf6951683c88cb95.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612b8029cf6951683c88cb95.jpeg'",
  " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\6126c23144b6d34fc41454c1.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\6126c23144b6d34fc41454c1.jpeg'",
- " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612696cc82bebe11d06df365.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612696cc82bebe11d06df365.jpeg'"
+ " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612696cc82bebe11d06df365.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\612696cc82bebe11d06df365.jpeg'",
+ "Cannot set headers after they are sent to the client": "Cannot set headers after they are sent to the client",
+ "city is required": "city is required",
+ "Unexpected token } in JSON at position 239": "Unexpected token } in JSON at position 239",
+ "dateTime must be a valid date": "dateTime must be a valid date",
+ " city. Cast to ObjectId failed for value Dubai (type string) at path city": " city. Cast to ObjectId failed for value Dubai (type string) at path city",
+ " city. Cast to ObjectId failed for value dubai (type string) at path city": " city. Cast to ObjectId failed for value dubai (type string) at path city",
+ "to is not allowed to be empty": "to is not allowed to be empty",
+ "from is required": "from is required",
+ "Unexpected token s in JSON at position 1": "Unexpected token s in JSON at position 1",
+ "Unexpected token s in JSON at position 7": "Unexpected token s in JSON at position 7",
+ " password. Path `password` is required., email. Invalid email": " password. Path `password` is required., email. Invalid email",
+ "last_name is required": "last_name is required",
+ " dateTime. Path `dateTime` is required., name. Path `name` is required.": " dateTime. Path `dateTime` is required., name. Path `name` is required.",
+ "Unexpected token I in JSON at position 0": "Unexpected token I in JSON at position 0",
+ "Unexpected token s in JSON at position 0": "Unexpected token s in JSON at position 0",
+ " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\2124210000000004.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\2124210000000004.jpeg'",
+ " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\2124370000000005.jpeg'": " no such file or directory, stat 'C.\\Users\\jibre\\Documents\\Ahmad-Dubai\\deliverq-api-main\\public\\uploads\\original\\2124370000000005.jpeg'"
 }

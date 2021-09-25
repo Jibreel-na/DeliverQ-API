@@ -9,9 +9,13 @@ const { response } = require('../config/contant');
 
 const createAddress = catchAsync(async (req, res) => {
   req.body.user = req.user.id;
+  console.log("ssssss");
   const Address = await addressService.createAddress(req.body, req);
+  console.log("kkkkk");
   res.send(response(httpStatus.OK, i18next.t('Address has been successfully craeted'), Address));
+  console.log("bbbbbb", Address, httpStatus);
   res.status(httpStatus.CREATED).send(Address);
+  console.log("iiiiiiii");
 });
 
 const getAllAddresses = catchAsync(async (req, res) => {
