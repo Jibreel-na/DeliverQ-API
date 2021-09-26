@@ -56,7 +56,6 @@ const getRequests = catchAsync(async (req, res) => {
     filters.push({ createdAt: { $gte: new Date(filter.startDate), $lte: new Date(new Date(filter.endDate).setDate(new Date(filter.endDate).getDate() + 1)) } })
   }
 
-
   const result = await requestService.queryRequests(filters, options, req);
   res.send(result);
 });
