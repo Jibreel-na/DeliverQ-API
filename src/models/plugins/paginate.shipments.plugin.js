@@ -217,47 +217,6 @@ const paginate = (schema) => {
 
 
 
-
-    agrigateFilters.push({
-      '$lookup': {
-        from: 'categoriessubs',
-        let: { subCategory: "$subCategory" },
-        as: 'subCategoryObj',
-        pipeline: [
-          { $match: { $expr: { $eq: ["$_id", "$$subCategory"] } } },
-        ],
-      }
-    })
-
-
-    agrigateFilters.push({
-      $unwind: {
-        path: '$subCategoryObj',
-        preserveNullAndEmptyArrays: true,
-      }
-    })
-
-    agrigateFilters.push({
-      '$lookup': {
-        from: 'categories',
-        let: { category: "$subCategoryObj.category" },
-        as: 'subCategoryObj.categoryObj',
-        pipeline: [
-          { $match: { $expr: { $eq: ["$_id", "$$category"] } } },
-        ],
-      }
-    })
-
-
-    agrigateFilters.push({
-      $unwind: {
-        path: '$subCategoryObj.categoryObj',
-        preserveNullAndEmptyArrays: true,
-      }
-    })
-
-
-
     agrigateFilters.push({
       '$lookup': {
         from: 'types',
@@ -348,7 +307,6 @@ const paginate = (schema) => {
         "companyAssignDate": { "$first": "$companyAssignDate" },
 
         "to": { "$first": "$to" },
-        "subCategory": { "$first": "$subCategory" },
         "type": { "$first": "$type" },
         "updatedAt": { "$first": "$updatedAt" },
         "userObj": { "$first": "$userObj" },
@@ -357,7 +315,6 @@ const paginate = (schema) => {
         "ecommerceObj": { "$first": "$ecommerceObj" },
         "fromObj": { "$first": "$fromObj" },
         "toObj": { "$first": "$toObj" },
-        "subCategoryObj": { "$first": "$subCategoryObj" },
         "typeObj": { "$first": "$typeObj" },
         "shipmentslogs": { "$push": "$shipmentslogs" },
 
@@ -581,54 +538,6 @@ const paginate = (schema) => {
     })
 
 
-
-
-    agrigateFilters.push({
-      '$lookup': {
-        from: 'categoriessubs',
-        let: { subCategory: "$subCategory" },
-        as: 'subCategoryObj',
-        pipeline: [
-          { $match: { $expr: { $eq: ["$_id", "$$subCategory"] } } },
-          {
-            $project: { title: '$' + multilanguageValues + req.headers['accept-language'] ? '$' + multilanguageValues + req.headers['accept-language'] : '$' + multilanguageValues + 'en', active: 1, category: 1 }
-          }
-        ],
-      }
-    })
-
-
-    agrigateFilters.push({
-      $unwind: {
-        path: '$subCategoryObj',
-        preserveNullAndEmptyArrays: true,
-      }
-    })
-
-    agrigateFilters.push({
-      '$lookup': {
-        from: 'categories',
-        let: { category: "$subCategoryObj.category" },
-        as: 'subCategoryObj.categoryObj',
-        pipeline: [
-          { $match: { $expr: { $eq: ["$_id", "$$category"] } } },
-          {
-            $project: { title: '$' + multilanguageValues + req.headers['accept-language'] ? '$' + multilanguageValues + req.headers['accept-language'] : '$' + multilanguageValues + 'en', price: 1, weight: 1, icon: 1 }
-          }
-        ],
-      }
-    })
-
-
-    agrigateFilters.push({
-      $unwind: {
-        path: '$subCategoryObj.categoryObj',
-        preserveNullAndEmptyArrays: true,
-      }
-    })
-
-
-
     agrigateFilters.push({
       '$lookup': {
         from: 'types',
@@ -722,7 +631,6 @@ const paginate = (schema) => {
         "driver": { "$first": "$driver" },
         "to": { "$first": "$to" },
         "assignedStatus": { "$first": "$assignedStatus" },
-        "subCategory": { "$first": "$subCategory" },
         "type": { "$first": "$type" },
         "updatedAt": { "$first": "$updatedAt" },
         "userObj": { "$first": "$userObj" },
@@ -731,7 +639,6 @@ const paginate = (schema) => {
         "ecommerceObj": { "$first": "$ecommerceObj" },
         "fromObj": { "$first": "$fromObj" },
         "toObj": { "$first": "$toObj" },
-        "subCategoryObj": { "$first": "$subCategoryObj" },
         "typeObj": { "$first": "$typeObj" },
         "shipmentslogs": { "$push": "$shipmentslogs" },
 
