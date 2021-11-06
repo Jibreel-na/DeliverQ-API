@@ -216,9 +216,8 @@ const LocationUpdates = (async (req, shipmemt) => {
 
 
 const CrowdJobForShipments = (async (req, shipmemt, lastlimitForLogs) => {
-  req.query.category = shipmemt.subCategoryObj.category;
   req.query.role = company;
-  const keyword = pick(req.query, ['search', 'category', 'role']);
+  const keyword = pick(req.query, ['search', 'role']);
   const filter = pick(req.query, ['name', 'role']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
 
@@ -340,7 +339,7 @@ const getShipmentss = catchAsync(async (req, res) => {
   }
 
   const filter = pick(req.query, ['status', 'user', 'from', 'to', 'subCategory', 'weight', 'comments', 'deliveryDate',
-    'createdAt', 'tag', 'company', 'driver', 'tag', 'assignedStatus', 'startDate', 'endDate', 'ecommerce']);
+    'createdAt', 'tag', 'company', 'driver', 'tag', 'assignedStatus', 'paymentStatus', 'startDate', 'endDate', 'ecommerce']);
   const options = pick(req.query, ['sortBy', 'limit', 'page']);
 
   var filters = [];
@@ -354,6 +353,10 @@ const getShipmentss = catchAsync(async (req, res) => {
 
   if (filter.assignedStatus && String(filter.assignedStatus) !== '-1') {
     filters.push({ assignedStatus: Number(filter.assignedStatus) })
+  }
+
+  if (filter.paymentStatus && String(filter.paymentStatus) !== '-1') {
+    filters.push({ paymentStatus: Number(filter.paymentStatus) })
   }
 
   if (filter.user) {

@@ -1,4 +1,8 @@
 const express = require('express');
+// const csrf = require('csrf');
+// const bodyParser = require('bodyParser');
+// const cookieParser = require('cookieParser');
+
 const helmet = require('helmet');
 const xss = require('xss-clean');
 const mongoSanitize = require('express-mongo-sanitize');
@@ -14,12 +18,22 @@ const routes = require('./routes/v1');
 const { errorConverter, errorHandler } = require('./middlewares/error');
 const ApiError = require('./utils/ApiError');
 
+// const csrfMiddleware = csrf({ cookie: true });
 
 const app = express();
 
 
 // enable cors
 app.use(cors());
+// app.use(bodyParser.json());
+// app.use(cookieParser());
+// app.use(csrfMiddleware);
+
+// app.all("*", (req, res, next) => {
+//   res.cookie("XSRF-TOKEN", req.csrfToken());
+//   next();
+// })
+
 app.options('*', cors());
 
 

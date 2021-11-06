@@ -9,6 +9,7 @@ const query = {
     deliveryDate: Joi.string(),
     weight: Joi.string(),
     status: Joi.number().default(-1),
+    paymentStatus: Joi.number().default(-1),
     other: Joi.number(),
     tag: Joi.string(),
     sortBy: Joi.string(),
@@ -55,7 +56,7 @@ const createGuest = {
       phone: Joi.string().allow(''),
       duration: Joi.string().allow(''),  
       productPayment: Joi.string().required(),  
-      productPaymentAmount: Joi.string().allow(''),  
+      productPaymentAmount: Joi.string().default(0),  
       deliveryPayment: Joi.string().required(),  
     }).required(),
 
